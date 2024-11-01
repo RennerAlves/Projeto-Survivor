@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class ControlaBala : MonoBehaviour
 {
-
     public float Velocidade = 20;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
     }
 
     void FixedUpdate()
@@ -28,12 +22,11 @@ public class ControlaBala : MonoBehaviour
 
     void OnTriggerEnter(Collider objetoDeColisao)
     {
-        if(objetoDeColisao.tag == "Inimigo")
+        if (objetoDeColisao.CompareTag("Inimigo"))
         {
-            Destroy(objetoDeColisao.gameObject);
+            Destroy(objetoDeColisao.gameObject); 
         }
 
         Destroy(gameObject);
-
     }
 }

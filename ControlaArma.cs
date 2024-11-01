@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class ControlaArma : MonoBehaviour
 {
-
     public GameObject Bala;
     public GameObject CanoDaArma;
+    public AudioClip shotSound; 
+    private AudioSource audioSource;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = gameObject.AddComponent<AudioSource>(); 
+        audioSource.clip = shotSound; 
+        audioSource.playOnAwake = false; 
     }
 
-    // Update is called once per frame
     void Update()
     {
+
         if (Input.GetButtonDown("Fire1"))
         {
             Instantiate(Bala, CanoDaArma.transform.position, CanoDaArma.transform.rotation);
+            audioSource.Play(); 
         }
     }
 }
