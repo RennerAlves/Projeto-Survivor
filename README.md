@@ -45,6 +45,7 @@ Desenvolvido com ❤️ e ☕ por:
 
 -Alerrandro
 -Esther Lourenço
+-Gustavo Feliciano
 -Nadaby Hauane
 -Pedro Canuto
 -Robert Santos
